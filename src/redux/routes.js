@@ -1,0 +1,16 @@
+export const routes = {
+  GET_COUNTRIES: "/resources/countries",
+  GET_REGIONS: "/resources/regions",
+  GET_CITIES: "/resources/cities",
+  GET_CATEGORIES: "/resources/categories",
+  GET_USER: "/secured/users",
+  POST_USER: "/secured/users",
+  PUT_USER: "/secured/users",
+  GET_ADS: "/secured/ads",
+  POST_ADS: "/secured/ads",
+  DELETE_ADS: "/secured/ads",
+  SET_USER_LINK: "/users",
+  SET_LOGIN_USER_LINK: "/login",
+  SEND_RESET_EMAIL_LINK: "/password/reset",
+  RESET_PASSWORD_LINK: "password/reset",
+};

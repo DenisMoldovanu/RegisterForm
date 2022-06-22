@@ -1,0 +1,81 @@
+/* Vars:
+   ========================================================================== */
+
+// Font
+$mainFont: 'Open Sans', 'Arial', sans-serif;
+
+// Size
+$mainFontColor: #ffffff;
+$mainFontSize: 16px;
+$mainFontWeight: 400;
+$mainLineHeight: 1.4;
+
+$desktopWidth: 1200px;
+$smDesktopWidth: 991px;
+$tableWidth: 768px;
+$smTableWidth: 640px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+$breakpoints: (
+  largeDesktop: '(min-width: 1300px)',
+  customDesktop: '(min-width: 1440px)',
+  desktop: '(min-width: 1200px) and (max-width: 1599px)',
+  desktopSmall: '(min-width: 992px) and (max-width: 1199px)',
+  onlyDesktop: '(min-width: 992px)',
+  maxDesktop: '(max-width: 1200px)',
+  untillDesktopSmall: '(min-width: 480px) and (max-width: 1199px)',
+  desktopAndTablet: '(min-width: 768px)',
+  desktopSmallAndTablet: '(min-width: 768px) and (max-width: 1299px)',
+  maxTablet: '(max-width: 991px)',
+  maxTabletSmaller: '(max-width: 968px)',
+  maxTabletSmaller2: '(max-width: 952px)',
+  tablet: '(min-width: 768px) and (max-width: 991px)',
+  tabletSm: '(min-width: 600px) and (max-width: 991px)',
+  phone: '(max-width: 767px)',
+  phoneXs: '(max-width: 600px)',
+  phoneSmall: '(max-width: 480px)',
+  phoneSm: '(max-width: 400px)',
+  iphone5: '(max-width: 350px)',
+);
+
+// Color
+$red: #DC3545;
+$green: #1d8365;
+$green2: #409d54;
+$dark-pink: #b42c66;
+$blood-orange: #f25100;
+$nice-blue: #156ebb;
+$blackHighest: #000000;
+$black: #1d1d1d;
+$accent: #207232;
+$blue: #013664;
+$blue-light: #c7e1ed;
+$white: #ffffff;
+$silver: #9b9b9d;
+$silver-light: #cccccc;
+$grey: #58585a;
+$grey2: #898989;
+$grey3: #e9e9e9;
+$grey4: #f5f5f5;
+$grey5: #f1f1f1;
+$grey6: #e8e8e8;
+$grey7: #b4b4b4;
+$grey8: #999999;
+$grey9: #a9a9a9;
+$grey10: #f9fafb;
+$grey11: #717171;
+$gold: #ac8e56;
+$black: #272727;
+$black2: #373737;
+$black3: #303030;
+$black4: #2e2e2e;
+$black5: #9c9c9c;
+$black6: #dfdfdf;
+$black7: #2b2b2b;
+$gri: #4d4d4d;
+
+// Light Color
+$white-color: rgba(255, 255, 255, 0.5);
+// Dark Color
+$black-color: rgba(0, 0, 0, 0.5);

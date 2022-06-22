@@ -1,0 +1,274 @@
+input,
+select,
+.input-value,
+.readOnly {
+  width: 100%;
+  border: solid 1px $grey3;
+  padding-left: 19px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Mulish", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: left;
+  color: $black2;
+}
+
+.readOnly {
+  display: flex;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input.normal {
+  font-weight: normal;
+}
+
+.error {
+  border-color: $red;
+}
+
+.message {
+  font-size: 12px;
+
+  @include respondto(maxTablet) {
+    display: none;
+  }
+}
+
+.message.error {
+  color: $red;
+}
+
+.message.success {
+  color: $green;
+}
+
+.select-parent {
+  position: relative;
+}
+
+select {
+  color: $black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 7px;
+  border: 1px solid $black6;
+  border-radius: 2px;
+  padding: 7.5px 32px 7.5px 19px;
+
+  option {
+    color: $black;
+  }
+}
+
+select[disabled] {
+  cursor: inherit;
+  background: rgba($grey, 0.1);
+}
+
+.react-select {
+  border-radius: 3px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Mulish", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  cursor: pointer;
+
+  div[class$="control"] {
+    border-radius: 3px;
+    border-color: $grey3;
+    outline: none;
+    box-shadow: 0px;
+    cursor: pointer;
+
+    &:active,
+    &:focus,
+    &:focus:active {
+      border-color: $gold;
+      box-shadow: 0px;
+      box-shadow: 0px 0px 0px 1px $gold;
+      outline: none;
+      -webkit-appearance: none;
+    }
+  }
+
+  div[class$="menu"] {
+    cursor: pointer;
+  }
+
+  div[class$="singleValue"] {
+    color: $grey9;
+    font-size: 12px;
+  }
+
+  &:active,
+  &:focus,
+  &:focus:active {
+    border-color: $gold;
+    box-shadow: none;
+  }
+}
+
+label {
+  font-family: "Mulish", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: left;
+  color: $grey7;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  margin-bottom: 11px;
+}
+
+.input-group {
+  max-width: 95%;
+  margin-top: 15px;
+
+  .input {
+    position: relative;
+    cursor: text;
+
+    input,
+    .readOnly {
+      height: 41px;
+    }
+
+    svg {
+      color: $grey6;
+      position: absolute;
+      top: 12px;
+      right: 14px;
+    }
+  }
+}
+
+svg[data-icon="eye"],
+svg[data-icon="eye-slash"] {
+  cursor: pointer;
+}
+
+a.btn {
+  color: $white;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: $gold;
+  text-transform: uppercase;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: normal;
+  text-align: center;
+  color: $white;
+  border: 2px solid transparent;
+
+  &.outline {
+    border: 2px solid $gold;
+    background-color: transparent;
+    color: $black;
+  }
+
+  &.append {
+    padding: 0px;
+  }
+
+  &:disabled {
+    cursor: text;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+.field-divider {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  z-index: 1;
+  width: 1px;
+  height: 60%;
+  margin-top: 5.5%;
+  background: $grey3;
+
+  @include respondto(phoneXs) {
+    right: 50px;
+    margin-top: 2%;
+  }
+
+  @include respondto(iphone5) {
+    display: none;
+  }
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: text;
+}
+
+.warning {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#react-confirm-alert {
+  .react-confirm-alert-body {
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: normal;
+    text-align: center;
+
+    .react-confirm-alert-button-group {
+      justify-content: center;
+
+      button {
+        background: $gold;
+      }
+    }
+  }
+}
+
+form {
+  position: relative;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,886 @@
+@import "imports";
+@import "form_items";
+
+.wrapper {
+  max-width: 1090px;
+  margin: 0 auto;
+  height: 100%;
+}
+.min_height {
+  min-height: calc(100vh - 214px - 194px) !important;
+}
+
+.profile-banner {
+  @include respondto(phoneSmall) {
+    padding: 12px 10px;
+    flex-direction: column;
+  }
+  margin: 30px 0px 20px 0px;
+  width: 100%;
+  background-color: $white;
+  padding: 24px 31px;
+  display: flex;
+  align-items: center;
+
+  .profile-info {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      @include respondto(phoneSmall) {
+        margin-right: 5px;
+      }
+      @include respondto(iphone5) {
+        display: none;
+      }
+      position: relative;
+      display: flex;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+
+      .edit-btn {
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        width: 26px;
+        height: 26px;
+        background-color: $white;
+        color: $gold;
+        border-radius: 50%;
+        right: 0px;
+        bottom: 1px;
+        box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.13);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 10px;
+        }
+      }
+    }
+
+    .profile-description {
+      @include respondto(phoneSmall) {
+        margin-left: 0px;
+        text-align: center;
+      }
+      margin-left: 29px;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+      line-height: 24px;
+
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.33;
+        color: $black2;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: normal;
+        color: $grey2;
+      }
+    }
+  }
+
+  .log-out {
+    @include respondto(phoneSmall) {
+      margin: 5px auto;
+    }
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    padding: 4px 14px;
+    font-size: 12px;
+    border-radius: 3px;
+    svg {
+      margin-left: 10px;
+    }
+  }
+}
+
+.profile-menu {
+  display: flex;
+  @include respondto(iphone5) {
+    flex-direction: column;
+  }
+
+  .profile-menu-item {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $black;
+    font-family: "Mulish", sans-serif;
+    margin-left: 5px;
+    padding: 14px 24px;
+    background-color: $gold;
+    color: $white;
+    @include respondto(phoneSmall) {
+      font-size: 12px;
+    }
+    @include respondto(iphone5) {
+      margin-left: 0px;
+      border-bottom: 1px solid $white;
+    }
+
+    &.active {
+      cursor: inherit;
+      font-weight: 600;
+      background-color: $white;
+      color: $black;
+      @include respondto(iphone5) {
+        margin-left: 0px;
+        border-bottom: 1px solid $gold;
+      }
+    }
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}
+
+.profile-container {
+  @include respondto(phoneXs) {
+    padding: 20px 10px;
+  }
+  padding: 50px;
+  width: 100%;
+  background-color: white;
+}
+
+.view-profile {
+  .profile-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    @include respondto(phoneXs) {
+      flex-direction: column;
+    }
+
+    .profile-column {
+      width: 28%;
+      @include respondto(phoneXs) {
+        width: 100%;
+        padding-left: 20px;
+      }
+
+      .title {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 24px;
+        letter-spacing: normal;
+        text-align: left;
+        color: $black3;
+        margin-bottom: 33px;
+      }
+    }
+
+    hr {
+      background-color: $grey3;
+      width: 1px;
+      border-width: 0px;
+      max-height: 233px;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    padding: 8.5px 28px;
+    @include respondto(phoneXs) {
+      margin-left: 20px;
+    }
+    @include respondto(phoneSm) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+
+    svg {
+      color: $gold;
+      margin-right: 13px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      font-family: "Mulish", sans-serif;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: $black;
+
+      &.underline {
+        text-decoration: underline;
+      }
+
+      &.bold {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.edit-profile {
+  .title {
+    font-size: 16px;
+    text-align: left;
+    line-height: 24px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $black3;
+
+    &.marginTop {
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+
+      .message.error {
+        margin-left: 5px;
+      }
+
+      .message.success {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .edit-profile-row {
+    width: 100%;
+
+    .profile-column {
+      @include respondto(phoneSmall) {
+        max-width: 100%;
+      }
+      @include respondto(untillDesktopSmall) {
+        max-width: 95%;
+      }
+      width: 100%;
+      position: relative;
+
+      .input-group {
+        display: block !important;
+
+        @include respondto(phoneSmall) {
+          max-width: 100%;
+        }
+        @include respondto(untillDesktopSmall) {
+          max-width: 95%;
+        }
+      }
+
+      &.double-width {
+        @include respondto(phoneSmall) {
+          width: 100%;
+        }
+        @include respondto(untillDesktopSmall) {
+          width: 100%;
+          max-width: 100%;
+        }
+        width: 73%;
+
+        .input-group {
+          max-width: 100%;
+        }
+
+        textarea {
+          width: 100%;
+          border: solid 1px $grey3;
+          height: 95px;
+          padding-left: 19px;
+          font-size: 14px;
+          font-weight: 600;
+          font-family: "Mulish", sans-serif;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 24px;
+          letter-spacing: normal;
+          text-align: left;
+          color: $black2;
+        }
+
+        svg {
+          position: absolute;
+          color: $grey6;
+          margin-top: 13px;
+          right: 13px;
+        }
+      }
+    }
+
+    &.two {
+      @include respondto(phoneSmall) {
+        width: 100%;
+        flex-direction: column;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      .profile-column {
+        @include respondto(phoneSmall) {
+          max-width: 100%;
+        }
+        @include respondto(untillDesktopSmall) {
+          max-width: 50%;
+        }
+        max-width: 37%;
+      }
+    }
+
+    &.three {
+      @include respondto(maxTablet) {
+        max-width: 100%;
+      }
+      @include respondto(phoneSmall) {
+        max-width: 100%;
+        flex-direction: column;
+      }
+      max-width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .profile-column {
+        @include respondto(phoneSmall) {
+          max-width: 100%;
+        }
+        max-width: 30%;
+      }
+
+      svg {
+        width: 20px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .btn {
+    @include respondto(phoneSmall) {
+      width: 100%;
+      text-align: center;
+    }
+    padding: 11px 26px;
+    margin-top: 43px;
+    margin-bottom: 47px;
+  }
+
+  hr {
+    max-width: 848px;
+    margin-left: 0px;
+    background-color: $grey4;
+    height: 1px;
+    border-width: 0px;
+  }
+
+  .btn.save {
+    @include respondto(phoneSmall) {
+      width: 100%;
+      text-align: center;
+    }
+    padding: 11px 26px;
+    margin-top: 24px;
+    margin-bottom: 70px;
+  }
+
+  .showPassword {
+    margin-top: 10px;
+    color: $grey6;
+
+    &.error {
+      margin-bottom: 10px;
+      margin-top: 0px;
+
+      &.msg {
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+.manage-listings {
+  padding: 31px 31px;
+  margin-bottom: 150px;
+  @include respondto(phoneXs) {
+    padding: 15px 5px;
+  }
+
+  .filter {
+    a.btn {
+      display: inline-block;
+    }
+
+    .btn.add {
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: 12px;
+      text-transform: inherit;
+      font-family: "Mulish", sans-serif;
+    }
+
+    .hide {
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-family: "Mulish", sans-serif;
+    }
+
+    .filter-list {
+      width: 100%;
+      display: flex;
+      margin-top: 20px;
+      @include respondto(maxTablet) {
+        flex-wrap: wrap;
+      }
+
+      .filter-list-item {
+        margin-left: 20px;
+        display: flex;
+        @include respondto(maxTablet) {
+          margin-left: 0px;
+          justify-content: center;
+        }
+        @include respondto(tabletSm) {
+          margin-left: 5px;
+          width: 25%;
+        }
+        @include respondto(phoneXs) {
+          width: 100%;
+          margin-top: 10px;
+        }
+
+        .select-parent {
+          @include respondto(tablet) {
+            width: 80%;
+          }
+          @include respondto(phoneXs) {
+            width: 100%;
+          }
+        }
+
+        .append {
+          display: flex;
+          height: 100%;
+          background-color: $gold;
+          border-radius: 3px;
+          @include respondto(phoneXs) {
+            height: 41px;
+            width: 100%;
+          }
+
+          input {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            font-family: "Mulish", sans-serif;
+            @include respondto(phoneXs) {
+              max-width: 100% !important;
+              width: 100%;
+            }
+          }
+
+          svg {
+            height: 100%;
+            color: $white;
+            margin: 0px 12px;
+          }
+        }
+
+        .append.ml {
+          margin-left: 5px;
+          @include respondto(phoneXs) {
+            max-width: 35%;
+            width: auto;
+          }
+        }
+
+        .profile-column {
+          height: 100%;
+          @include respondto(phoneXs) {
+            width: 100%;
+          }
+
+          .input-group {
+            margin-top: 0px;
+            height: 100%;
+            @include respondto(phoneXs) {
+              width: 100%;
+              max-width: 100%;
+            }
+
+            input {
+              font-size: 12px;
+            }
+
+            input::placeholder {
+              font-size: 12px;
+              color: $black;
+            }
+          }
+        }
+
+        .select-parent {
+          select {
+            font-family: "Mulish", sans-serif;
+            font-size: 12px;
+            border-radius: 3px;
+          }
+        }
+      }
+
+      .filter-list-item:last-child {
+        margin-left: auto;
+
+        @include respondto(maxTablet) {
+          margin-top: 10px;
+          justify-content: start;
+          width: 100%;
+        }
+
+        @include respondto(phoneXs) {
+          justify-content: center;
+        }
+      }
+
+      .filter-list-item:first-child {
+        margin-left: 0px;
+      }
+    }
+
+    .extendedFilters {
+      margin-top: 27px;
+      padding: 19px 17px;
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid $grey3;
+      @include respondto(iphone5) {
+        padding: 19px 5px;
+      }
+
+      .filter-item {
+        width: 20%;
+        padding-left: 11px;
+        padding-right: 11px;
+        margin-bottom: 20px;
+        @include respondto(phone) {
+          width: 50%;
+        }
+        @include respondto(iphone5) {
+          width: 100%;
+          padding: 0px;
+        }
+
+        &.full {
+          width: 100%;
+          margin-bottom: 0px;
+
+          .btn {
+            padding: 6px 12px;
+            font-family: "Mulish", sans-serif;
+            font-size: 12px;
+            @include respondto(iphone5) {
+              width: 100%;
+            }
+          }
+
+          .outline {
+            margin-left: 11px;
+            @include respondto(iphone5) {
+              width: 100%;
+              margin-left: 0px;
+              margin-top: 10px;
+            }
+          }
+        }
+
+        &.doubleWidth {
+          width: 40%;
+
+          @include respondto(phone) {
+            width: 50%;
+          }
+          @include respondto(iphone5) {
+            width: 100%;
+            padding: 0px;
+          }
+
+          .react-select {
+            width: 50%;
+
+            @include respondto(phone) {
+              width: 100%;
+            }
+          }
+        }
+
+        .profile-column {
+          @include respondto(phone) {
+            height: 100%;
+          }
+
+          label {
+            @include respondto(phone) {
+              display: none;
+            }
+            color: $black;
+          }
+
+          .input-group {
+            margin-top: 0px;
+            max-width: 100%;
+
+            input {
+              padding-left: 10px;
+              border-radius: 3px;
+              color: $grey9;
+              font-size: 12px;
+            }
+          }
+        }
+
+        select {
+          padding-left: 10px;
+          border-radius: 3px;
+          color: #373737;
+        }
+
+        label {
+          font-family: "Mulish", sans-serif;
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 2;
+          letter-spacing: normal;
+          text-align: left;
+          color: #2e2e2e;
+        }
+      }
+    }
+  }
+
+  .table {
+    margin-top: 27px;
+    width: 100%;
+    position: relative;
+    @include respondto(maxDesktop) {
+      overflow-x: auto;
+    }
+
+    .table-body {
+      width: 100%;
+      display: table;
+
+      .table-row {
+        display: table-row;
+        width: 100%;
+        min-height: 55px;
+
+        &.archived {
+          .table-td {
+            background-color: rgba(247, 244, 238, 0.5);
+          }
+        }
+
+        .table-th {
+          display: table-cell;
+          border: 1px solid $grey3;
+          font-size: 12px;
+          line-height: 24px;
+          font-family: "Mulish", sans-serif;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 24px;
+          letter-spacing: normal;
+          color: #2e2e2e;
+          min-width: 80px;
+
+          .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 32px;
+            width: 100%;
+            position: relative;
+          }
+        }
+
+        .table-td {
+          display: table-cell;
+          border: 1px solid $grey3;
+          font-size: 12px;
+          line-height: 24px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 24px;
+          letter-spacing: normal;
+          color: #2e2e2e;
+          max-width: 150px;
+
+          .item {
+            @include respondto(maxDesktop) {
+              min-width: 150px;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 32px;
+            width: 100%;
+
+            .icon-box:first-child {
+              margin-left: 12px;
+            }
+
+            .icon-box:last-child {
+              margin-right: 12px;
+            }
+
+            .icon-box {
+              position: relative;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 20px;
+              height: 20px;
+              background: $grey5;
+              margin-left: 5px;
+
+              svg {
+                color: $gold;
+              }
+
+              .pop-up {
+                position: absolute;
+                z-index: 1;
+                min-width: 36px;
+                height: 24px;
+                text-transform: capitalize;
+                background-color: white;
+                display: none;
+                font-size: 10px;
+                font-family: "Open Sans", sans-serif;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 24px;
+                letter-spacing: normal;
+                text-align: center;
+                color: #2b2b2b;
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.12);
+                top: -30px;
+                padding-left: 5px;
+                padding-right: 5px;
+                border-radius: 5px;
+                left: -11px;
+              }
+
+              .pop-up:before {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                bottom: -5px;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid $white;
+                left: calc(50% - 2.5px);
+              }
+            }
+
+            .icon-box:hover {
+              .pop-up {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .pagination-parent {
+    text-align: center;
+    margin: 42px 0 32px 0;
+
+    .pagination {
+      display: inline-block;
+      background: $grey10;
+      padding: 13px 11px 12px 11px;
+      border-radius: 3px;
+
+      .pagination-item {
+        cursor: pointer;
+        display: inline;
+        padding: 9px 10px;
+        margin: 0px 2px;
+        color: $grey11;
+        font-family: "Mulish", sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.88;
+        letter-spacing: normal;
+        border-radius: 3px;
+
+        &:first-child {
+          margin: 0 15px 0 0;
+          background: #eaeaea;
+        }
+        &:last-child {
+          margin: 0 0 0 15px;
+          background: #eaeaea;
+        }
+
+        &.disabled {
+          background: inherit;
+          cursor: text;
+          color: #aaa;
+        }
+
+        &.active {
+          color: $white;
+          background: $gold;
+        }
+      }
+    }
+  }
+}
+.forgotTitle {
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 500;
+  color: #966c20;
+}

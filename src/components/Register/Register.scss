@@ -1,0 +1,140 @@
+.form-container {
+  height: 100%;
+  .auth-wrapper {
+    height: 100% !important;
+    padding: 80px 0px;
+  }
+}
+
+.registration-block-form {
+  .btn {
+    &:focus,
+    &:active {
+      outline: none !important;
+      box-shadow: none !important;
+      background-color: #966c20;
+      border-color: #966c20;
+    }
+  }
+
+  .register-title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #966c20;
+  }
+  .error-email {
+    color: red;
+    text-align: center;
+  }
+  .register-block {
+    margin-bottom: 20px;
+
+    .input-group {
+      max-width: 100%;
+    }
+
+    .register-block-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #ac8e56;
+      text-align: center;
+    }
+
+    .gender-block {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        color: #ac8e56;
+      }
+
+      .radio-btns-block {
+        display: flex;
+        gap: 25px;
+        .gender-radio-btn {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          input {
+            width: unset;
+          }
+
+          // .btn-secondary {
+          //   width: 25%;
+          //   background-color: #ac8e56;
+          //   border-color: #966c20;
+          //   color: white;
+          // }
+
+          // .btn-check:checked + .btn-secondary,
+          // .btn-check:active + .btn-secondary,
+          // .btn-secondary:active,
+          // .btn-secondary.active,
+          // .show > .btn-secondary.dropdown-toggle {
+          //   color: #fff;
+          //   background-color: #966c20;
+          //   border-color: #ac8e56;
+          // }
+        }
+      }
+    }
+
+    .name {
+      .country_select {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+
+        font-family: "Mulish", sans-serif;
+      }
+
+      .region_select {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+
+        font-family: "Mulish", sans-serif;
+      }
+      .is-error {
+        border: 1px solid red;
+      }
+    }
+  }
+  .new-register {
+    .btn-outline-primary:hover {
+      color: #fff;
+      background-color: #ac8e56;
+      border-color: #966c20;
+    }
+  }
+  .register-terms-block {
+    margin-bottom: 20px;
+
+    .terms-register {
+      display: flex;
+      align-items: center;
+      input {
+        width: unset;
+      }
+      label {
+        margin-left: 10px;
+        margin-bottom: 0px;
+      }
+
+      b {
+        color: #966c20;
+      }
+    }
+  }
+}
+.btn-primary.disabled {
+  color: #fff;
+  background-color: grey !important;
+  border-color: grey !important;
+}
+.btn:disabled {
+  background-color: grey !important;
+  border-color: grey !important;
+}
