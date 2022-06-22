@@ -1,0 +1,145 @@
+.advertisement-block {
+  margin-bottom: 6rem;
+  .display-flex {
+    gap: 4rem;
+    @include respondto(phone) {
+      flex-direction: column;
+    }
+  }
+
+  .main-block {
+    border-radius: 5px;
+    max-width: 79.8rem;
+    width: 100%;
+    background-color: #9ce1e6;
+    padding: 7rem 2rem 4rem 5rem;
+    position: relative;
+    @include respondto(desktopSm) {
+      padding: 3rem;
+    }
+
+    @include respondto(maxTablet) {
+      padding: 2rem;
+    }
+
+    .content-main {
+      position: absolute;
+      top: 10.4rem;
+      left: 3rem;
+      @include respondto(desktopSm) {
+        top: 15.4rem;
+      }
+      @include respondto(maxTablet) {
+        top: 13.4rem;
+        left: 2rem;
+      }
+      @include respondto(phone) {
+        position: inherit;
+      }
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 2.4rem;
+      }
+    }
+    .main-advertisment-img {
+      text-align: end;
+    }
+    .sale {
+      width: 14.4rem;
+      background-color: #fff;
+      text-align: center;
+      margin-bottom: 1.7rem;
+      span {
+        font-size: 1.4rem;
+        @include font-weight(semibold);
+      }
+    }
+    .main-block-title {
+      margin-bottom: 1.1rem;
+      font-size: 3.6rem;
+      font-weight: 300;
+    }
+  }
+  .first-block {
+    max-width: 28rem;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #f76945;
+    padding: 3.6rem 2rem;
+    text-align: center;
+
+    @include respondto(phone) {
+      max-width: 100%;
+    }
+    h3 {
+      color: $white;
+      font-size: 3rem;
+      @include font-weight(semibold);
+      max-width: 13rem;
+      margin: auto;
+      margin-bottom: 1.7rem;
+      @include respondto(phone) {
+        max-width: 100%;
+      }
+    }
+    .first-block-img {
+      position: relative;
+      max-width: 225px;
+      margin: auto;
+    }
+    .first-block-sale {
+      position: absolute;
+      right: 3.6rem;
+      top: 0.8rem;
+      width: 8rem;
+      height: 8rem;
+      border: solid 6px #f76945;
+      background-color: $white;
+      border-radius: 50%;
+      padding-top: 1.7rem;
+      @include respondto(phone) {
+        right: 1.6rem;
+      }
+      span {
+        font-size: 2rem;
+        @include font-weight(extrabold);
+        line-height: 1rem;
+      }
+    }
+  }
+  .secondary-block {
+    max-width: 28rem;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fed4ae;
+    text-align: center;
+    position: relative;
+    @include respondto(phone) {
+      max-width: 100%;
+      padding: 1.6rem 1rem;
+    }
+
+    .secondary-block-img {
+      margin-top: 2.4rem;
+    }
+    .secondary-text-block {
+      position: absolute;
+      bottom: 3.5rem;
+      @include respondto(phone) {
+        position: inherit;
+      }
+      h3 {
+        font-size: 3.6rem;
+        @include font-weight(extrabold);
+        color: #7d532d;
+        margin-bottom: 0.8rem;
+      }
+      p {
+        font-size: 1.3rem;
+        color: #504e4c;
+        text-align: center;
+        line-height: normal;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.partners-block {
+  height: 32rem;
+  @include respondto(maxTablet) {
+    height: unset;
+    margin-bottom: 3rem;
+  }
+
+  .absolute-bottom {
+    padding: 5.9rem 5.6rem 5.7rem;
+    @include respondto(maxTablet) {
+      position: inherit;
+    }
+    @include respondto(phone) {
+      padding: 2.9rem 2.6rem 4.7rem;
+    }
+  }
+  .display-flex {
+    .card-item {
+      @include respondto(phone) {
+        width: 25%;
+      }
+    }
+  }
+
+  h5 {
+    font-size: 3rem;
+    @include font-weight(light);
+    text-transform: none;
+    text-align: start;
+    margin-bottom: 3.1rem;
+  }
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+  }
+}

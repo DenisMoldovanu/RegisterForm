@@ -1,0 +1,85 @@
+.about-content {
+  height: 155rem;
+  @include respondto(desktopSmall) {
+    margin-bottom: 3rem;
+  }
+  @include respondto(maxTablet) {
+    height: unset;
+  }
+
+  .absolute-top {
+    padding: 6rem 0rem;
+    width: unset;
+  }
+  .text-content-about {
+    padding: 0rem 11.6rem;
+    @include respondto(phone) {
+      padding: 0rem 2.6rem;
+    }
+    h5 {
+      @include respondto(phone) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .text-content-about:first-child {
+    margin-bottom: 7.5rem;
+    p {
+      margin: auto;
+      text-align: center;
+      max-width: 82.6rem;
+      font-size: 1.4rem;
+      color: #787575;
+    }
+    h5 {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      text-transform: none;
+      @include respondto(phone) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  img {
+    margin-bottom: 4.3rem;
+  }
+
+  h5 {
+    font-size: 3rem;
+    @include font-weight(light);
+    text-transform: none;
+    text-align: start;
+    margin-bottom: 4.1rem;
+  }
+  .margin-bottom-about {
+    margin-bottom: 6.7rem;
+  }
+
+  .sublock-content {
+    .display-flex {
+      @include respondto(phone) {
+        flex-direction: column;
+      }
+    }
+
+    span {
+      @include font-weight(extrabold);
+      font-size: 1.4rem;
+      @include respondto(desktopSmall) {
+        margin-right: 4rem;
+        min-width: 10rem;
+      }
+      @include respondto(phone) {
+        margin-bottom: 1rem;
+      }
+    }
+    p {
+      max-width: 76.3rem;
+      font-size: 1.4rem;
+      @include respondto(desktopSmall) {
+        max-width: 50rem;
+      }
+    }
+  }
+}

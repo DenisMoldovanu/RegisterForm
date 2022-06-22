@@ -1,0 +1,10 @@
+input {
+  color: $black;
+  font-family: $font-secondary;
+
+  &::placeholder {
+    color: $black;
+    font-family: $font-secondary;
+    opacity: 1; //firefox fix
+  }
+}

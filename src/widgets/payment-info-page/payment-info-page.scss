@@ -1,0 +1,66 @@
+.payment-info {
+  height: 100rem;
+  @include respondto(desktopSmall) {
+    height: 112rem;
+  }
+  @include respondto(maxTablet) {
+    height: unset;
+    margin-bottom: 5rem;
+  }
+
+  .absolute-top {
+    padding: 6rem 8.7rem;
+    width: 97%;
+    @include respondto(phone) {
+      width: 100%;
+      padding: 3rem 2rem;
+    }
+  }
+
+  h5 {
+    font-size: 3rem;
+    @include font-weight(light);
+    text-transform: none;
+    text-align: start;
+    margin-bottom: 2.5rem;
+  }
+  p {
+    font-size: 1.4rem;
+    color: #787575;
+  }
+  .payment-block {
+    max-width: 100rem;
+    p {
+      margin-bottom: 3.2rem;
+    }
+    span {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+  .payment-block:first-child {
+    margin-bottom: 9rem;
+  }
+  .payment-subtext {
+    span {
+      font-size: 1.4rem;
+    }
+  }
+  .two-block-payment {
+    margin-bottom: 3rem;
+    svg {
+      width: 5.1rem;
+      height: 5.1rem;
+      margin-right: 2.5rem;
+    }
+    @include respondto(phone) {
+      flex-direction: column;
+    }
+  }
+  .cash {
+    margin-right: 10.5rem;
+    @include respondto(phone) {
+      margin-right: 0rem;
+    }
+  }
+}

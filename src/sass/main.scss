@@ -1,0 +1,33 @@
+@import "common/breakpoints.scss";
+@import "common/colors.scss";
+@import "common/fonts.scss";
+@import "common/flex.scss";
+@import "common/mixins.scss";
+@import "common/margins.scss";
+@import "common/widths.scss";
+@import "common/global.scss";
+@import "common/general-classes.scss";
+@import "common/buttons.scss";
+@import "common/forms.scss";
+@import "common/pages.scss";
+@import "common/header.scss";
+@import "common/footer.scss";
+
+//tiraaas widgets
+@import "../widgets/homepage-hero-slider/homepage-hero-slider.scss";
+@import "../widgets/product-slider/product-slider.scss";
+@import "../widgets/advertisement-block/advertisement-block.scss";
+@import "../widgets/four-cards-homepage/four-cards-homepage.scss";
+@import "../widgets/contacts-buttons/contacts-buttons.scss";
+@import "../widgets/hero-widget/hero-widget.scss";
+@import "../widgets/about-content/about-content.scss";
+@import "../widgets/about-why-us/about-why-us.scss";
+@import "../widgets/partners-block/partners-block.scss";
+@import "../widgets/payment-info-page/payment-info-page.scss";
+@import "../widgets/help-page/help-page.scss";
+@import "../widgets/contacts-page/contacts-page.scss";
+
+// end widgets
+
+// mac style fixes
+// @import "common/mac-styles.scss";

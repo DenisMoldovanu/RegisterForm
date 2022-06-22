@@ -1,0 +1,137 @@
+.hero-slider {
+  background-image: linear-gradient(89deg, #faca5b 0%, #f4ac3e 65%);
+  @include respondto(maxTablet) {
+    margin-bottom: 5.2rem;
+  }
+
+  img {
+    margin-right: 14.9rem;
+    @include respondto(phone) {
+      margin-right: 0;
+    }
+  }
+  .container {
+    position: relative;
+    background-image: url(../../img/sliderbackground.webp);
+    padding: 2rem 2.5rem 7.5rem 2.5rem;
+    background-repeat: no-repeat;
+    background-position: 13% 103%;
+    @include respondto(phone) {
+      padding: 2rem;
+      max-width: 100%;
+    }
+  }
+  .swiper-container {
+    @include respondto(maxTablet) {
+      padding-bottom: 2rem;
+    }
+
+    .swiper-pagination-bullets {
+      @include respondto(maxTablet) {
+        bottom: 0;
+      }
+    }
+  }
+
+  .display-flex {
+    @include respondto(phone) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  .content-slider {
+    @include respondto(phone) {
+      margin-bottom: 10px;
+    }
+
+    .text-block {
+      p {
+        font-size: 1.4rem;
+        @include font-weight(extrabold);
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-size: 3.6rem;
+        @include font-weight(extrabold);
+        color: $white;
+        line-height: normal;
+        margin-bottom: 1.7rem;
+        letter-spacing: 5.94px;
+        @include respondto(phone) {
+          font-size: 3rem;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .hero-slider-navs {
+    .hero-slider-nav,
+    .hero-slider-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 4.4rem;
+      height: 4.4rem;
+      border-radius: 50%;
+      opacity: 0.56;
+      box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
+      background-color: #fff;
+      @include respondto(maxTablet) {
+        display: none;
+      }
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+
+      svg {
+        fill: $black;
+        height: 40px;
+        width: 14px;
+      }
+    }
+  }
+
+  .hero-slider-nav--next,
+  .hero-slider-nav--prev {
+    color: $white;
+
+    &.swiper-button-disabled {
+      display: none;
+    }
+
+    @include respondto(maxTablet) {
+      display: none;
+    }
+  }
+
+  .hero-slider-nav--prev {
+    left: 3rem;
+
+    @media (min-width: 992px) and (max-width: 1300px) {
+      left: 0rem;
+    }
+  }
+
+  .hero-slider-nav--next {
+    right: 3rem;
+
+    @media (min-width: 992px) and (max-width: 1300px) {
+      right: 0rem;
+    }
+  }
+  .swiper-pagination {
+    width: 100%;
+
+    span:first-child {
+      margin-right: 1rem;
+    }
+  }
+}

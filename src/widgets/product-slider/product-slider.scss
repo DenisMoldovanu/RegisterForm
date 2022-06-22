@@ -1,0 +1,226 @@
+.product-slider {
+  height: 35.4rem;
+
+  @include respondto(maxTablet) {
+    height: unset;
+    margin-bottom: 5.2rem;
+  }
+
+  .display-flex {
+    @include respondto(phone) {
+      flex-direction: column;
+    }
+  }
+
+  .title-slider-block {
+    padding: 0rem 8rem;
+    text-align: center;
+    @include respondto(phone) {
+      padding: 4rem 0rem;
+    }
+    p {
+      font-size: 2.4rem;
+      color: $black;
+      margin-bottom: 1.5rem;
+    }
+    button {
+      padding: 9px 26px 10px;
+      border-radius: 5px;
+      background-color: #f7b551;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border: none;
+    }
+  }
+
+  .slider-container {
+    max-width: 1400px;
+    width: 100%;
+    overflow: hidden;
+
+    .swiper-container {
+      @include respondto(maxTablet) {
+        padding-bottom: 2rem;
+      }
+
+      .swiper-pagination-bullets {
+        @include respondto(maxTablet) {
+          bottom: 0;
+        }
+      }
+    }
+    .product-container {
+      padding: 2.8rem 4rem;
+      box-shadow: 0 0 40px 0 rgba(214, 213, 213, 0.25);
+      background-color: #fff;
+    }
+    .block-wrapper {
+      position: relative;
+    }
+    .product-like,
+    .product-view {
+      width: 2.6rem;
+      height: 2.6rem;
+      background-color: $white;
+      text-align: center;
+      padding-top: 0.2rem;
+
+      position: absolute;
+
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .product-like {
+      top: 1rem;
+      left: 1rem;
+    }
+    .product-view {
+      top: 4rem;
+      left: 1rem;
+    }
+
+    img {
+      margin-bottom: 1.3rem;
+    }
+    .product-title {
+      font-size: 1.2rem;
+      color: #563318;
+      margin-bottom: 0.5rem;
+    }
+    .content-block {
+      .box-wrapper {
+        p {
+          font-size: 1.4rem;
+          font-weight: 600;
+          max-width: 15.4rem;
+          line-height: normal;
+          margin-bottom: 0.8rem;
+        }
+        span {
+          margin-bottom: 1.2rem;
+          display: block;
+        }
+      }
+      .bottom-wrapper {
+        .price {
+          span {
+            font-size: 1.6rem;
+            font-weight: 700;
+          }
+        }
+        .add-cart {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          svg {
+            width: 2rem;
+            height: 2rem;
+            fill: $Casablanca;
+          }
+          span {
+            display: block;
+            max-width: 42px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      display: none;
+      @include respondto(maxTablet) {
+        display: block;
+      }
+    }
+    .custom-slider-navs {
+      .custom-slider-nav,
+      .custom-slider-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 50%;
+        opacity: 0.56;
+        box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
+        background-color: #fff;
+        @include respondto(maxTablet) {
+          display: none;
+        }
+      }
+
+      button {
+        background-color: transparent;
+        border: none;
+
+        svg {
+          fill: $black;
+          height: 40px;
+          width: 14px;
+        }
+      }
+    }
+
+    .custom-slider-nav--next,
+    .custom-slider-nav--prev {
+      color: $white;
+
+      &.swiper-button-disabled {
+        display: none;
+      }
+
+      @include respondto(maxTablet) {
+        display: none;
+      }
+    }
+
+    .custom-slider-nav--prev {
+      left: 27rem;
+
+      @media screen and (max-width: 1200px) {
+        left: 25.6rem;
+      }
+    }
+
+    .custom-slider-nav--next {
+      right: -2rem;
+    }
+  }
+
+  .rate {
+    float: left;
+  }
+  .rate:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+  }
+  .rate:not(:checked) > label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ccc;
+  }
+  .rate:not(:checked) > label:before {
+    content: "★ ";
+  }
+  .rate > input:checked ~ label {
+    color: #ffc700;
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+  }
+}
